@@ -1,0 +1,14 @@
+[
+  {
+    "id": "candidate_a",
+    "name": "Ahmad Pratama",
+    "image": "assets/images/calon_a.png",
+    "description": "Calon Pertama"
+  },
+  {
+    "id": "candidate_b",
+    "name": "Siti Rahmawati",
+    "image": "assets/images/calon_b.png",
+    "description": "Calon Kedua"
+  }
+]
