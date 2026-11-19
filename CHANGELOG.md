@@ -4,6 +4,14 @@ Semua perubahan penting pada proyek **MariVote - Pemilihan Calon Android** dicat
 
 ---
 
+## [1.1.1] - 2026-11-19
+
+### 🐛 Fixed
+- **Multi-Drive Kotlin Compiler Fix**: Menonaktifkan cache inkremental Kotlin (`kotlin.incremental=false` & `kotlin.incremental.useClasspathSnapshot=false` pada `android/gradle.properties`) untuk mengatasi bug `RelocatableFileToPathConverter` saat project Flutter berada di drive berbeda (`D:\`) dengan pub cache (`C:\`).
+- **Launcher CLI Enhancement (`run.bat`)**: Menambahkan menu opsi `[8]` Analisis Statis (`flutter analyze`) dan `[9]` Uninstall & Reset App di Device via ADB (`adb uninstall com.marivote.pemilihancalon`) dengan deteksi otomatis path ADB platform-tools.
+
+---
+
 ## [1.1.0] - 2026-11-19
 
 ### ✨ Added

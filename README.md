@@ -6,7 +6,7 @@
 [![Dart Version](https://img.shields.io/badge/Dart-3.11.5-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
 [![Android Min SDK](https://img.shields.io/badge/Android%20Min%20SDK-API%2026%20(8.0+)-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
 [![Tests Passing](https://img.shields.io/badge/Tests-15%2F15%20Passed%20(100%25)-success?style=for-the-badge&logo=githubactions&logoColor=white)](#-pengujian-otomatis)
-[![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=for-the-badge)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.1.1-blue?style=for-the-badge)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ---

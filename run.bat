@@ -19,11 +19,13 @@ echo   [4] Build APK Debug                     - flutter build apk --debug
 echo   [5] Jalankan Unit ^& Widget Test         - flutter test
 echo   [6] Bersihkan Cache ^& Unduh Paket       - flutter clean ^& pub get
 echo   [7] Cek Perangkat / Emulator ^& Doctor   - flutter devices ^& doctor
+echo   [8] Analisis Statis (Linting)            - flutter analyze
+echo   [9] Uninstall / Reset App di HP/Device   - adb uninstall com.marivote.pemilihancalon
 echo.
 echo   [0] Keluar
 echo.
 echo ================================================================
-set /p CHOICE="Masukkan pilihan Anda [0-7]: "
+set /p CHOICE="Masukkan pilihan Anda [0-9]: "
 
 if "%CHOICE%"=="1" goto RUN_DEBUG
 if "%CHOICE%"=="2" goto RUN_RELEASE
@@ -32,6 +34,8 @@ if "%CHOICE%"=="4" goto BUILD_DEBUG
 if "%CHOICE%"=="5" goto RUN_TESTS
 if "%CHOICE%"=="6" goto CLEAN_GET
 if "%CHOICE%"=="7" goto CHECK_DEVICES
+if "%CHOICE%"=="8" goto RUN_ANALYZE
+if "%CHOICE%"=="9" goto UNINSTALL_DEVICE
 if "%CHOICE%"=="0" goto EXIT_APP
 
 echo.
@@ -132,6 +136,40 @@ echo --- Status Flutter Doctor: ---
 flutter doctor
 echo.
 echo Selesai. Tekan sembarang tombol untuk kembali ke menu...
+pause >nul
+goto MENU
+
+:RUN_ANALYZE
+cls
+echo ================================================================
+echo   Menjalankan Analisis Statis Kode (Dart / Flutter Analyze)...
+echo ================================================================
+echo.
+flutter analyze
+echo.
+echo Selesai. Tekan sembarang tombol untuk kembali ke menu...
+pause >nul
+goto MENU
+
+:UNINSTALL_DEVICE
+cls
+echo ================================================================
+echo   Menghapus Instalasi MariVote dari Perangkat (ADB Uninstall)...
+echo ================================================================
+echo.
+set "ADB_BIN=adb"
+where adb >nul 2>&1
+if errorlevel 1 (
+    if exist "%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe" (
+        set "ADB_BIN=%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe"
+    )
+)
+echo Menggunakan ADB: !ADB_BIN!
+echo Menjalankan uninstall com.marivote.pemilihancalon...
+"!ADB_BIN!" uninstall com.marivote.pemilihancalon
+echo.
+echo Jika berhasil (Success), cache dan aplikasi lama di perangkat telah bersih.
+echo Tekan sembarang tombol untuk kembali ke menu...
 pause >nul
 goto MENU
 

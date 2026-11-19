@@ -14,13 +14,13 @@ Jika terjadi kontradiksi aturan, urutan prioritas hukum tertinggi adalah:
 ## 📌 Metadata Proyek
 
 - **Nama Aplikasi**: **MariVote - Pemilihan Calon Android** (Static Prototype)
-- **Versi Saat Ini**: `v1.1.0`
+- **Versi Saat Ini**: `v1.1.1`
 - **Platform & Runtime**: Flutter 3.41.9 / Dart 3.11.5 / Android SDK (Min API 26, Target API 34+)
 - **Package ID / Namespace**: `com.marivote.pemilihancalon`
 - **Tipe Arsitektur**: Layered MVVM + Repository Pattern (Presentation, Controller/ViewModel, Data, Services)
 - **Dokumentasi Proyek**: [PRD Aplikasi](docs/PRD_Aplikasi_Pemilihan_Calon_Android_Static.md) & [UI Kit Spesifikasi](docs/UI_Kit_Aplikasi_Pemilihan_Calon_Android.md)
 - **Histori Rilis**: `CHANGELOG.md` & `README.md`
-- **Sumber Versi Runtime**: `pubspec.yaml` (`version: 1.1.0+2`)
+- **Sumber Versi Runtime**: `pubspec.yaml` (`version: 1.1.1+3`)
 
 ---
 
